@@ -1,0 +1,31 @@
+<form action="" method="post" enctype="multipart/form-data"> 
+  <table class="ui-widget ui-widget-content" style="border-collapse: collapse;">
+    <tr>
+      <th>部門代碼</th>
+      <th>部門名稱</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="dep_code" value=""></td>
+      <td><input type="text" name="dep_name" value=""></td>
+    </tr>
+    <tr>
+      <td colspan="3"><input type="submit" name="submit" value="新增"></td>
+    </tr>
+  </table>
+</form>
+<div>
+  <table class="ui-widget ui-widget-content" style="border-collapse: collapse;width:100%;">
+    <tr>
+      <th>編號 </th>
+      <th>部門代碼 </th>
+      <th>部門名稱 </th>
+    </tr>
+    {foreach from=$dep_data  item=item key=key}
+    <tr>
+      <td> {$item.id}</td>
+      <td> {$item.dep_code}</td>
+      <td> {$item.dep_name}</td>
+    </tr>
+    {/foreach}
+  </table>
+</div>

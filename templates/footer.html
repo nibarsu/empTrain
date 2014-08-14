@@ -1,0 +1,38 @@
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr> 
+  </table>
+</body>
+</html>
+{literal}
+<!--基本樣式-->
+<!--<link type="text/css" href="css/basic.css" rel="stylesheet" />-->
+<style>
+  {padding:0;margin:0;}
+  body{background-color:#8fbc8f}
+  input{background-color:#c0c0c0}
+</style>
+<!--jquery ui-->
+<link type="text/css" href="jqueryui/jquery-ui.min.css" rel="stylesheet" />
+<script type="text/javascript" src="jqueryui/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="jqueryui/jquery-ui.min.js"></script>
+<script type="text/JavaScript">
+  $(document).ready(function(){ 
+      //button
+      $("a")
+      .button()
+      .click(function(even){
+        even.prevenDefault();
+        });
+      //alert("test");
+      $(".ui-widget.ui-widget-content th").addClass("ui-widget-header"); 
+      $(".ui-widget.ui-widget-content td").addClass("ui-widget-content").css("text-align","center");
+        $(".ui-widget.ui-widget-content tr").css("height","27px");
+        });
+$( "input[name='hiredate']" ).datepicker({dateFormat:"yy-mm-dd"});
+$( "input[name='sdate']" ).datepicker({dateFormat:"yy-mm-dd"});
+$( "input[name='edate']" ).datepicker({dateFormat:"yy-mm-dd"});
+$( "input[name='tdate[]']" ).datepicker({dateFormat:"yy-mm-dd"});
+//$("#functdiv").dialog();
+</script>
+{/literal}

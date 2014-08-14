@@ -1,0 +1,50 @@
+<form action="" method="post" enctype="multipart/form-data"> 
+<table class="ui-widget ui-widget-content" style="border-collapse: collapse;">
+    <tr>
+      <th>姓名</th> 
+      <td><input type="text" name="qemp" value="{$emp_data.cname}"></td>
+      <th>到職日期</th>
+      <td><div name="hiredate">{$emp_data.hiredate}</div></td>
+    </tr>
+    <tr>
+      <th>任職單位</th> 
+      <td><div name="dep_name">{$dep_data.dep_name}</div></td>
+      <th>職位</th>
+      <td><div name="job_name">{$job_data.job_name}</div></td>
+    </tr>
+    <tr>
+    <td colspan="4"><input type="submit" name="query" value="查詢"></td>
+    </tr>
+  </table>
+</form>
+
+<div>
+  <table class="ui-widget ui-widget-content" style="border-collapse: collapse;">
+    <tr>
+      <th>員工姓名</th>
+      <th>課程名稱</th>
+      <th>上課日期</th>
+      <th>訓練單位</th>
+      <th>分數</th>
+      <th>時數</th>
+      <th>證照管理</th>
+      <th>輸入人員</th>
+    </tr>
+    {foreach from=$list item=item key=key}
+    <tr>
+      <td style="width:150px;">
+        {$item.cdesc}
+      </td>
+      <td style="width:200px;">
+        {$item.course}
+      </td>
+      <td>{$item.tdate}</td>
+      <td>{$item.tdep}</td>
+      <td>{$item.score}</td>
+      <td>{$item.hours}</td>
+      <td>{$item.cert}</td>
+      <td>{$item.creator}</td>
+    </tr>
+    {/foreach}
+  </table>
+</div>

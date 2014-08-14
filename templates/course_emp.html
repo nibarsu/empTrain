@@ -1,0 +1,70 @@
+<form action="" method="post" enctype="multipart/form-data"> 
+  <table class="ui-widget ui-widget-content" style="border-collapse: collapse;">
+    <tr>
+      <th>員工姓名</th>
+      <th>課程名稱</th>
+      <th>上課日期</th>
+      <th>訓練單位</th>
+      <th>分數</th>
+      <th>時數</th>
+      <th>證照管理</th>
+      <th>輸入人員</th>
+    </tr>
+    {section name='cloop' loop=10}
+    <tr>
+      <td>
+        <select name="eid[]" style="width:150px;">
+          {html_options options=$emp_options}
+        </select>
+      </td>
+      <td>
+        <select name="cid[]" style="width:200px;">
+          {html_options options=$course_options}
+        </select>
+      </td>
+      <td><input type="text" name="tdate[]"   value="" style="width:100px;"></td>
+      <td><input type="text" name="tdep[]"    value="" style="width:100px;"></td>
+      <td><input type="text" name="score[]"   value="" style="width:60px;"></td>
+      <td><input type="text" name="hours[]"  value="" style="width:60px;"></td>
+      <td><input type="text" name="cert[]"    value="" style="width:80px;"></td>
+      <td><input type="text" name="creator[]" value="" style="width:80px;"></td>
+    </tr>
+    {/section}
+    <tr>
+      <td colspan="8" style="text-align:center;">
+        <input type="submit" name="submit" value="新增">
+      </td>
+    </tr>
+  </table>
+</form>
+<hr>
+<div>
+  <table class="ui-widget ui-widget-content" style="border-collapse: collapse;">
+    <tr>
+      <th style="width:150px;">員工姓名</th>
+      <th style="width:200px;">課程名稱</th>
+      <th style="width:100px;">上課日期</th>
+      <th style="width:100px;">訓練單位</th>
+      <th style="width:60px;">分數</th>
+      <th style="width:60px;">時數</th>
+      <th style="width:80px;">證照管理</th>
+      <th style="width:80px;">輸入人員</th>
+    </tr>
+    {foreach from=$list item=item key=key}
+    <tr>
+      <td style="width:150px;">
+        {$item.cdesc}
+      </td>
+      <td style="width:200px;">
+        {$item.course}
+      </td>
+      <td>{$item.tdate}</td>
+      <td>{$item.tdep}</td>
+      <td>{$item.score}</td>
+      <td>{$item.hours}</td>
+      <td>{$item.cert}</td>
+      <td>{$item.creator}</td>
+    </tr>
+    {/foreach}
+  </table>
+</div>
