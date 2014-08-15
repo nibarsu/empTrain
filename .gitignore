@@ -1,4 +1,5 @@
-cache/
+csache/
+pma/
 templates_c/
 jqueryui/
 includes/adodb/
