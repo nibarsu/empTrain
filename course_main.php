@@ -30,6 +30,7 @@ if ($_POST["submit"]=="新增"){
   $fdata["fee"] = $_POST["fee"];
   $fdata["teacher"] = $_POST["teacher"];
   $fdata["addr"] = $_POST["addr"];
+  $fdata["train_unit"] = $_POST["train_unit"];
   write_to_table($fdata,"HR.course_master");
   $cid = $conn->Insert_ID();
   $ctime = date("Y-m-d H:i:s");
