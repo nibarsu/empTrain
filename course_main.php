@@ -40,7 +40,8 @@ if ($_POST["submit"]=="新增"){
     if ($val){
       $cdata["eid"]   = $_POST["eid"][$key];
       $cdata["cid"]   = $cid;
-      $cdata["tdate"]   = $_POST["tdate"][$key];
+      //$cdata["tdate"]   = $_POST["tdate"][$key];
+      $cdata["tdate"]   = $_POST["sdate"];
       $cdata["tdep"]   = $_POST["tdep"][$key];
       $cdata["score"]   = $_POST["score"][$key];
       $cdata["hours"]   = $_POST["hours"][$key];
